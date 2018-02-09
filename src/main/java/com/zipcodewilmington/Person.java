@@ -4,7 +4,7 @@ package com.zipcodewilmington;
  * Created by leon on 1/24/18.
  */
 public class Person {
-    private final String firstName ;
+    private final String firstName;
     private final String lastName;
 
     public Person(String firstName, String lastName) {
