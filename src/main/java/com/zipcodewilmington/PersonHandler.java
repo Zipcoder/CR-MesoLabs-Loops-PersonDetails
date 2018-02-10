@@ -1,5 +1,7 @@
 package com.zipcodewilmington;
 
+import com.sun.source.tree.WhileLoopTree;
+
 /**
  * Created by leon on 1/24/18.
  */
@@ -21,6 +23,15 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
+        int counter = 0;
+        while (counter < personArray.length){
+            for (int i = 0; i < personArray.length; i++){
+               result += personArray[i];
+                counter++;
+            }
+        }
+
+
         return result;
     }
 
@@ -38,8 +49,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
+        result = whileLoop();
 
-        return result;
+;        return result;
     }
 
 
@@ -54,7 +66,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        for (Person i: personArray){
+            result += i;
+        }
         return result;
     }
 
