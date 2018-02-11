@@ -11,55 +11,50 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
-        String result = "";
-        // assume there is a `counter`
-        // while `counter` is less than length of array
-            // begin loop
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+        String name = "";
+        int counter = 0;
+        while (counter < personArray.length) {
+            Person currentDude = personArray[counter];
+            currentDude.toString();
+            name += currentDude;
+            counter++;
+        }
 
-            // end loop
-        return result;
+        return name;
     }
-
 
 
     public String forLoop() {
-        String result = "";
-        // identify initial value
-        // identify terminal condition
-        // identify increment
 
-        // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
+        String name = "";
+        for (int i = 0; i < personArray.length; i++) {
+            Person currentDude = personArray[i];
+            currentDude.toString();
+            name += currentDude;
+        }
 
-        return result;
+        return name;
     }
 
 
 
-    public String forEachLoop() {
-        String result = "";
-        // identify array's type
-        // identify array's variable-name
 
-        // use the above discoveries to declare for-each-loop signature
-            // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
+        public String forEachLoop() {
 
-        return result;
+            String name = "";
+            for (Person firstLast : personArray) {
+                firstLast.toString();
+                name += firstLast;
+            }
+
+            return name;
+        }
+
+
+        public Person[] getPersonArray () {
+
+            return personArray;
+        }
     }
 
-
-    public Person[] getPersonArray() {
-        return personArray;
-    }
-}
