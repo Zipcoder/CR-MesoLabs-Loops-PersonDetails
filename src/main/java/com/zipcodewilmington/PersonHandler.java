@@ -19,12 +19,19 @@ public class PersonHandler {
 
     private final Person[] personArray;
 
+    /*below is the constructor of the PersonHandler. You can tell if something is a constructor bc it'll look just like class
+    but it won't say class, plus it'll have parameter parentheses (as you know params are optional)
+
+    If you create an object, but you put nothing in the params/arguments (same exact thing), it'll output the default.
+
+    */
     public PersonHandler(Person[] personArray) {
         this.personArray = personArray;
     }
 
+    //below  is a method of the PersonHandler class
     public String whileLoop() {
-        String result = "";
+        String ourNameList = "";
         // assume there is a `counter`
         int counter = 0;
 
@@ -38,7 +45,8 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
 
-        result += personArray[counter].toString();
+            //the below appends the value of personArray at index counter to our result String.
+        ourNameList += personArray[counter].toString();
 
             // end loop
 
@@ -46,7 +54,7 @@ public class PersonHandler {
 
         }
 
-        return result;
+        return ourNameList;
     }
 
 
