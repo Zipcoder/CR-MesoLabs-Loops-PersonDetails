@@ -36,7 +36,7 @@ public class PersonHandler {
 
     public String forLoop() {
         String result = "";
-        for (int i = 0; i <personArray.length;){
+        for (int i = 0; i <personArray.length;i++){
             Person currentPerson = personArray[i];
             currentPerson.toString();
             result += currentPerson;
@@ -62,6 +62,7 @@ public class PersonHandler {
         String result = "";
         for (Person fullName : personArray){
             fullName.toString();
+            fullName.getFirstName();
             result += fullName;
 
         }
@@ -80,6 +81,6 @@ public class PersonHandler {
 
     public Person[] getPersonArray() {
         return personArray;
-        
+
     }
 }
