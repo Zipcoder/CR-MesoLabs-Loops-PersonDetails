@@ -7,11 +7,18 @@ public class PersonHandler {
     private final Person[] personArray;
 
     public PersonHandler(Person[] personArray) {
+
         this.personArray = personArray;
     }
 
     public String whileLoop() {
         String result = "";
+        int counter = 0;
+        while (counter < personArray.length){
+            result += personArray[counter];
+            counter++;
+
+        }
         // assume there is a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -28,6 +35,9 @@ public class PersonHandler {
 
     public String forLoop() {
         String result = "";
+        for( int i =0; i < personArray.length; i++){
+            result += personArray[i];
+        }
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -46,6 +56,10 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
+        for (Person newString : this.personArray){
+            result += newString;
+
+        }
         // identify array's type
         // identify array's variable-name
 
