@@ -5,42 +5,42 @@ package com.zipcodewilmington;
  */
 public class PersonHandler {
     private final Person[] personArray;
+
     public PersonHandler(Person[] personArray) {
         this.personArray = personArray;
     }
+
     public String whileLoop() {
-        String name = "";
+        StringBuilder name = new StringBuilder();
         int counter = 0;
         while (counter < personArray.length) {
-            Person currentDude = personArray[counter];
-            currentDude.toString();
-            name += currentDude;
+            Person currentPerson = personArray[counter];
+            name.append(currentPerson);
             counter++;
         }
-        return name;
+
+        return name.toString();
     }
 
     public String forLoop() {
-        String name = "";
-        for (int i = 0; i < personArray.length; i++) {
-            Person currentDude = personArray[i];
-            currentDude.toString();
-            name += currentDude;
+        StringBuilder name = new StringBuilder();
+        for (Person currentPerson : personArray) {
+            name.append(currentPerson);
         }
-        return name;
+
+        return name.toString();
     }
 
-        public String forEachLoop() {
-            String name = "";
-            for (Person firstLast : personArray) {
-                firstLast.toString();
-                name += firstLast;
-            }
-            return name;
+    public String forEachLoop() {
+        StringBuilder name = new StringBuilder();
+        for (Person firstLast : personArray) {
+            name.append(firstLast);
         }
 
-        public Person[] getPersonArray () {
-            return personArray;
-        }
+        return name.toString();
     }
 
+    public Person[] getPersonArray() {
+        return personArray;
+    }
+}
