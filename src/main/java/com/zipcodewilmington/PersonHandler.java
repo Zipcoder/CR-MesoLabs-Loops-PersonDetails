@@ -11,53 +11,34 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
-        String result = "";
-        // assume there is a `counter`
-        // while `counter` is less than length of array
-            // begin loop
+        StringBuilder name = new StringBuilder();
+        int counter = 0;
+        while (counter < personArray.length) {
+            Person currentPerson = personArray[counter];
+            name.append(currentPerson);
+            counter++;
+        }
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
-        return result;
+        return name.toString();
     }
-
-
 
     public String forLoop() {
-        String result = "";
-        // identify initial value
-        // identify terminal condition
-        // identify increment
+        StringBuilder name = new StringBuilder();
+        for (Person currentPerson : personArray) {
+            name.append(currentPerson);
+        }
 
-        // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-
-        return result;
+        return name.toString();
     }
-
-
 
     public String forEachLoop() {
-        String result = "";
-        // identify array's type
-        // identify array's variable-name
+        StringBuilder name = new StringBuilder();
+        for (Person firstLast : personArray) {
+            name.append(firstLast);
+        }
 
-        // use the above discoveries to declare for-each-loop signature
-            // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-
-        return result;
+        return name.toString();
     }
-
 
     public Person[] getPersonArray() {
         return personArray;
