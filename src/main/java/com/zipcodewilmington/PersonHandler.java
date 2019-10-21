@@ -42,7 +42,7 @@ public class PersonHandler {
     public String forLoop() {
         StringBuilder result = new StringBuilder();
 
-        for (int counter = 1; counter < personArray.length; counter++) {
+        for (int counter = 0; counter < personArray.length; counter++) {
             String firstName = personArray[counter].getFirstName();
             String lastName = personArray[counter].getLastName();
             result.append("\nMy first name is " + firstName + "\n" +
@@ -64,7 +64,14 @@ public class PersonHandler {
 
 
     public String forEachLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+
+        for(Person p : personArray) {
+            String firstName = p.getFirstName();
+            String lastName = p.getLastName();
+            result.append("\nMy first name is " + firstName + "\n" +
+                    "My last name is " + lastName);
+        } return result.toString();
         // identify array's type
         // identify array's variable-name
 
@@ -74,7 +81,7 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+
     }
 
 
