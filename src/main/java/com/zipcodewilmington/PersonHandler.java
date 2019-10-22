@@ -18,7 +18,7 @@ public class PersonHandler {
 
         while (counter < personArray.length){
 
-            result = result + String.valueOf(personArray[counter]);
+            result = result + personArray[counter].toString();
 
             counter++;
         }
@@ -44,7 +44,7 @@ public class PersonHandler {
         // identify increment
         for( int counter = 0; counter < personArray.length; counter++){
 
-            result = result + String.valueOf(personArray[counter]);
+            result = result + (personArray[counter]).toString();
         }
         // use the above clauses to declare for-loop signature
             // begin loop
@@ -64,8 +64,10 @@ public class PersonHandler {
 
         for (Person item : personArray) {
 
-            result = result + item;
+            result = result + item.toString();
         }
+
+
         // identify array's type
         // identify array's variable-name
 
