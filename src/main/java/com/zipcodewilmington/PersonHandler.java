@@ -10,8 +10,18 @@ public class PersonHandler {
         this.personArray = personArray;
     }
 
+
+
+    String result = "";
+    int i = 0; //Counter
+
     public String whileLoop() {
-        String result = "";
+
+        while( i < personArray.length)
+
+            result += personArray[i];// Counter identifies each array index value and appends it to result
+            i++;
+
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -21,7 +31,8 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
+
+        return result;// returns the array values in a string
     }
 
 
