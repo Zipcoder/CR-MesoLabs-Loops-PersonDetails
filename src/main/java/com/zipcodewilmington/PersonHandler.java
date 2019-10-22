@@ -7,20 +7,32 @@ public class PersonHandler {
     private final Person[] personArray;
 
     public PersonHandler(Person[] personArray) {
+
         this.personArray = personArray;
     }
 
     public String whileLoop() {
-        String result = "";
         // create a `counter`
         // while `counter` is less than length of array
-            // begin loop
+        // begin loop
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+        // use `counter` to identify the `current Person` in the array
+        // get `string Representation` of `currentPerson`
+        // append `stringRepresentation` to `result` variable
 
-            // end loop
+        // end loop
+
+        String result = "";
+
+        int iCounter = 0;
+
+        while (iCounter < personArray.length) {
+
+            result += personArray[iCounter].toString();
+            iCounter ++;
+
+        }
+
         return result;
     }
 
@@ -39,6 +51,10 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
+        for (int i = 0; i < personArray.length; i++){
+
+            result += personArray[i].toString();
+        }
         return result;
     }
 
@@ -54,7 +70,9 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+        for (Person names : personArray) {
+            result += names.toString();
+        }
         return result;
     }
 
