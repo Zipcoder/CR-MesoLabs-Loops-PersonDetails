@@ -27,7 +27,9 @@ public class PersonHandler {
 
             // end loop
             counter++;
+
         }
+        System.out.println(result);
         return result;
     }
 
