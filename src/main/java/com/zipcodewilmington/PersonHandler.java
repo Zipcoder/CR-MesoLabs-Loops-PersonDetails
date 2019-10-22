@@ -9,6 +9,8 @@ public class PersonHandler {
     public PersonHandler(Person[] personArray) {
         this.personArray = personArray;
     }
+    //String myFirstName = "\nMy first name is ";
+    //String myLastName = "\nMy last name is ";
 
     public String whileLoop() {
         String result = "";
@@ -21,6 +23,16 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
+            int loopLength = 0;
+
+            while  (loopLength < personArray.length)
+            {
+                //result = result + myFirstName + personArray[loopLength].getFirstName() + myLastName + personArray[loopLength].getLastName();
+                result += personArray[loopLength].toString();
+                loopLength++;
+            }
+
+
         return result;
     }
 
@@ -39,6 +51,13 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
+
+        for ( int i=0 ; i<personArray.length; i++)
+        {
+            //result = result + myFirstName + personArray[i].getFirstName() + myLastName + personArray[i].getLastName();
+            result = result + personArray[i].toString();
+        }
+
         return result;
     }
 
@@ -46,6 +65,7 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
+
         // identify array's type
         // identify array's variable-name
 
@@ -54,7 +74,12 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
+        for (Person pers: personArray)
+        {
+        //result = result + myFirstName + pers.getFirstName() + myLastName + pers.getLastName();
+            result = result + pers.toString(); //calling toString method from Person Class to display the concat string
 
+        }
         return result;
     }
 
