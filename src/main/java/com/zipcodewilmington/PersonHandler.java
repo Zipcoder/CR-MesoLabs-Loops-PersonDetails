@@ -13,14 +13,18 @@ public class PersonHandler {
     public String whileLoop() {
         String result = "";
         // create a `counter`
+        int i;
+
         // while `counter` is less than length of array
             // begin loop
-
+            for (i=0; i < personArray.length; i++) {
                 // use `counter` to identify the `current Person` in the array
+                Person currentPerson = personArray[i];
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
-
-            // end loop
+                result += currentPerson.toString();
+                // end loop
+            }
         return result;
     }
 
