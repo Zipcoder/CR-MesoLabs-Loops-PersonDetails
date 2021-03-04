@@ -61,8 +61,17 @@ public class PersonHandler {
 
 
     public String forEachLoop() {
-
         String result = "";
+        for ( Person name : personArray ){
+            String currentPerson = name.toString();
+            result = result + currentPerson;
+
+
+        }
+        return result;
+        }
+
+
         // identify array's type
         // identify array's variable-name
 
@@ -72,8 +81,8 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
-    }
+
+
 
 
     public Person[] getPersonArray() {
