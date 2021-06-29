@@ -17,11 +17,11 @@ public class PersonHandler {
             // begin loop
         int counter=0;
 
-        StringBuilder array = new StringBuilder();
+        StringBuilder sbForArray = new StringBuilder();
 
             while(counter< personArray.length){
 //
-                array.append(personArray[counter]);
+                sbForArray.append(personArray[counter]);
                 counter++;
             //array.append(System.lineSeparator());
         }
@@ -31,7 +31,7 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return array.toString();
+        return sbForArray.toString();
     }
 
 
@@ -62,15 +62,18 @@ public class PersonHandler {
         String result = "";
         // identify array's type
         // identify array's variable-name
-int counter=0;
-StringBuilder array = new StringBuilder();
-for()
+
+StringBuilder sbForArray = new StringBuilder();
+        for (Person name:personArray
+             ) {
+            sbForArray.append(name);
+        };
         // use the above discoveries to declare for-each-loop signature
             // begin loop
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
+    return sbForArray.toString();
 
     }
 
