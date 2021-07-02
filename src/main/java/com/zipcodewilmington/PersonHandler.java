@@ -17,8 +17,6 @@ public class PersonHandler {
          result +=  personArray[count].toString();
             count++; // begin loop
         }
-
-
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
@@ -31,17 +29,10 @@ public class PersonHandler {
 
     public String forLoop() {
         String result = "";
-        for (int i = 0; i < personArray.length; i++); {// identify initial value // identify terminal condition // identify increment  // use the above clauses to declare for-loop signature // begin loop
-
-
-
-
-
+        for (int i = 0; i < personArray.length; i++) {// identify initial value // identify terminal condition // identify increment  // use the above clauses to declare for-loop signature // begin loop
+            result += personArray[i].toString();
+                                                        //i++ is inside for () does not need to be repeated again
         }
-
-
-
-
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
@@ -54,9 +45,12 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
-        // identify array's type
-        // identify array's variable-name
+        int i = 0;
+        for (Person name : personArray) {
+            result += personArray[i].toString();
+            i++;
 
+        }
         // use the above discoveries to declare for-each-loop signature
             // begin loop
                 // get `string Representation` of `currentPerson`
